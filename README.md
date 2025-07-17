@@ -6,7 +6,15 @@
 git clone https://github.com/WilfredoN/dt-test-assessment
 cd dt-test-assessment
 npm i
+```
+
+#### Usage
+
+```bash
+# Stories
 npm run storybook
+# Production (empty, realized only provider for further possible using)
+npm run dev
 ```
 
 #### Screenshots
