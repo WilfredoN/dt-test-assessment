@@ -1,6 +1,6 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react'
 
-import {  useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 
 import { SidebarMenuItems } from './SidebarMenuItems'
 import './SidebarMenu.scss'

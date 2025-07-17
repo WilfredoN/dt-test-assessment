@@ -1,4 +1,4 @@
-import type {SVGProps} from 'react';
+import type { SVGProps } from 'react'
 
 export const Eye = (props: SVGProps<SVGSVGElement>) => (
   <svg fill='none' height='1em' viewBox='0 0 20 20' width='1em' {...props}>

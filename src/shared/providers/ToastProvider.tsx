@@ -1,9 +1,7 @@
 import React, { createContext, useCallback, useState } from 'react'
 
-import type { ToastProps } from '../ui/toast/Toast'
-
-import { Toast } from '../ui/toast/Toast'
 import './Toast.scss'
+import { Toast, type ToastProps } from '@/shared/ui/toast/Toast'
 
 interface ToastContextProps {
   showToast: (toast: Omit<ToastProps, 'onClose'>) => void
