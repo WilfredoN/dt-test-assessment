@@ -21,6 +21,7 @@ export default antfu({
   rules: {
     'antfu/no-top-level-await': 'off',
     'curly': ['error', 'all'],
+    'no-alert': 'off',
     'node/no-process-env': 'off',
     'node/prefer-global/process': 'off',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
