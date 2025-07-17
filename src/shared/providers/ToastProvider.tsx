@@ -1,5 +1,7 @@
 import React, { createContext, useCallback, useState } from 'react'
+
 import type { ToastProps } from '../ui/toast/Toast'
+
 import { Toast } from '../ui/toast/Toast'
 import './Toast.scss'
 

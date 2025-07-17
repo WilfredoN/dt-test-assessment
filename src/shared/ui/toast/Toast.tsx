@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
+
 import './Toast.scss'
 
 export type ToastType = 'info' | 'success' | 'warning' | 'error'
 
 export interface ToastProps {
-  message: string
-  type?: ToastType
-  duration?: number
-  onClose?: () => void
   closable?: boolean
+  duration?: number
+  message: string
+  onClose?: () => void
+  type?: ToastType
 }
 
 export const Toast = ({
@@ -50,9 +51,9 @@ export const Toast = ({
       <span className='toast__message'>{message}</span>
       {closable && (
         <button
+          className='toast__close-button'
           type='button'
           onClick={handleClose}
-          className='toast__close-button'
         >
           ×
         </button>

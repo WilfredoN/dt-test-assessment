@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import { SidebarMenu } from './SidebarMenu'
+
 import type { SidebarMenuItem } from './SidebarMenu'
+
+import { SidebarMenu } from './SidebarMenu'
 
 export default {
   title: 'Components/Inputs/SidebarMenu',
@@ -45,7 +47,6 @@ export const OneLevel = () => {
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
         style={{
           position: 'fixed',
           top: '16px',
@@ -58,10 +59,11 @@ export const OneLevel = () => {
           border: 'none',
           cursor: 'pointer'
         }}
+        onClick={() => setOpen(true)}
       >
         Open Sidebar
       </button>
-      <SidebarMenu open={open} onClose={() => setOpen(false)} items={items1} />
+      <SidebarMenu items={items1} open={open} onClose={() => setOpen(false)} />
     </>
   )
 }
@@ -71,7 +73,6 @@ export const TwoLevel = () => {
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
         style={{
           position: 'fixed',
           top: '16px',
@@ -84,10 +85,11 @@ export const TwoLevel = () => {
           border: 'none',
           cursor: 'pointer'
         }}
+        onClick={() => setOpen(true)}
       >
         Open Sidebar
       </button>
-      <SidebarMenu open={open} onClose={() => setOpen(false)} items={items2} />
+      <SidebarMenu items={items2} open={open} onClose={() => setOpen(false)} />
     </>
   )
 }
@@ -97,7 +99,6 @@ export const Closed = () => {
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
         style={{
           position: 'fixed',
           top: '16px',
@@ -110,10 +111,11 @@ export const Closed = () => {
           border: 'none',
           cursor: 'pointer'
         }}
+        onClick={() => setOpen(true)}
       >
         Open Sidebar
       </button>
-      <SidebarMenu open={open} onClose={() => setOpen(false)} items={items2} />
+      <SidebarMenu items={items2} open={open} onClose={() => setOpen(false)} />
     </>
   )
 }

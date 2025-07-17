@@ -29,7 +29,7 @@ export const Info = {
     type: 'info',
     closable: true,
     onClose: () => {
-      console.log('close beep')
+      console.warn('close beep')
     }
   }
 }
@@ -39,7 +39,7 @@ export const Success = {
     type: 'success',
     closable: true,
     onClose: () => {
-      console.log('close beep')
+      console.warn('close beep')
     }
   }
 }
@@ -49,7 +49,7 @@ export const Warning = {
     type: 'warning',
     closable: true,
     onClose: () => {
-      console.log('close beep')
+      console.warn('close beep')
     }
   }
 }
@@ -59,7 +59,7 @@ export const Error = {
     type: 'error',
     closable: true,
     onClose: () => {
-      console.log('close beep')
+      console.warn('close beep')
     }
   }
 }
@@ -69,7 +69,7 @@ export const Closable = {
     closable: true,
     duration: 0,
     onClose: () => {
-      console.log('close beep')
+      console.warn('close beep')
     }
   }
 }
@@ -78,7 +78,7 @@ export const NotClosable = {
     message: 'Not closable',
     closable: false,
     onClose: () => {
-      console.log('close beep')
+      console.warn('close beep')
     }
   }
 }
@@ -87,7 +87,7 @@ export const LongDuration = {
     message: 'Long duration',
     duration: 7000,
     onClose: () => {
-      console.log('close beep')
+      console.warn('close beep')
     }
   }
 }
@@ -97,7 +97,7 @@ export const ManualClose = {
     duration: 0,
     closable: true,
     onClose: () => {
-      console.log('close beep')
+      console.warn('close beep')
     }
   }
 }

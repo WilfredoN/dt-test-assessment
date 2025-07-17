@@ -1,12 +1,13 @@
 import type { SidebarMenuItem } from './SidebarMenu'
+
 import { getExpandIcon, hasChildren } from './SidebarMenu.utils'
 import { SidebarMenuItems } from './SidebarMenuItems'
 
 interface SidebarMenuItemSingleProps {
-  item: SidebarMenuItem
-  level: number
   expanded: Record<string, boolean>
   handleExpand: (label: string) => void
+  item: SidebarMenuItem
+  level: number
 }
 
 export const SidebarMenuItemSingle = ({
@@ -39,9 +40,9 @@ export const SidebarMenuItemSingle = ({
         </button>
         {childrenExist && (
           <button
+            aria-label={isExpanded ? 'Collapse' : 'Expand'}
             className='sidebar-menu-item__expand-button'
             onClick={() => handleExpand(item.label)}
-            aria-label={isExpanded ? 'Collapse' : 'Expand'}
           >
             {getExpandIcon(isExpanded)}
           </button>
@@ -50,10 +51,10 @@ export const SidebarMenuItemSingle = ({
       {childrenExist && isExpanded && (
         <div className='sidebar-menu-item__children'>
           <SidebarMenuItems
-            items={item.children!}
-            level={level + 1}
             expanded={expanded}
             handleExpand={handleExpand}
+            items={item.children!}
+            level={level + 1}
           />
         </div>
       )}

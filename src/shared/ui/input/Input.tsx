@@ -1,5 +1,6 @@
+import type { ChangeEvent, InputHTMLAttributes } from 'react'
+
 import React, { useState } from 'react'
-import type { InputHTMLAttributes, ChangeEvent } from 'react'
 
 import { Eye, EyeOff } from '../icons'
 import './Input.scss'
@@ -40,30 +41,30 @@ export const Input = ({
   return (
     <div className='input'>
       <input
+        className='input__field'
+        disabled={props.disabled}
         name='input'
         type={inputType}
         value={value}
         onChange={handleChange}
-        disabled={props.disabled}
-        className='input__field'
         {...props}
       />
       {isPassword && (
         <button
-          type='button'
-          tabIndex={-1}
-          onClick={handleTogglePassword}
           className='input__button input__button--password'
+          tabIndex={-1}
+          type='button'
+          onClick={handleTogglePassword}
         >
           {showPassword ? <EyeOff /> : <Eye />}
         </button>
       )}
       {clearable && (
         <button
-          type='button'
-          tabIndex={-1}
-          onClick={handleClear}
           className='input__button input__button--clear'
+          tabIndex={-1}
+          type='button'
+          onClick={handleClear}
         >
           ×
         </button>

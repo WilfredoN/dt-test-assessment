@@ -1,11 +1,12 @@
 import type { SidebarMenuItem } from './SidebarMenu'
+
 import { SidebarMenuItemSingle } from './SidebarMenuItemSingle'
 
 interface SidebarMenuItemsProps {
-  items: SidebarMenuItem[]
-  level?: number
   expanded: Record<string, boolean>
   handleExpand: (label: string) => void
+  items: SidebarMenuItem[]
+  level?: number
 }
 
 export const SidebarMenuItems = ({
@@ -19,10 +20,10 @@ export const SidebarMenuItems = ({
       {items.map((item) => (
         <SidebarMenuItemSingle
           key={item.label}
-          item={item}
-          level={level}
           expanded={expanded}
           handleExpand={handleExpand}
+          item={item}
+          level={level}
         />
       ))}
     </ul>
